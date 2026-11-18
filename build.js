@@ -118,16 +118,15 @@ layout({
   desc: 'Din lokala byggpartner i Skövde. Snickeri, måleri, fasad, stenläggning, murning, kakel, tapet och grävning. Begär en kostnadsfri offert idag.',
   schema: `\n<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'HomeAndConstructionBusiness', name: 'Smart Gräv och Bygg', description: 'Byggservice i Skövde: snickeri, måleri, fasad, mur, kakel, tapet, stenläggning och grävning.', telephone: TEL, areaServed: 'Skövde', address: { '@type': 'PostalAddress', addressLocality: 'Skövde', addressCountry: 'SE' }, sameAs: [FB, IG] })}</script>`,
   body: `
-<section class="hero hero-bg"><div class="wrap">
-  <div class="hero-text">
+<section class="hero-bg" role="img" aria-label="Smart Gräv och Bygg – byggarbetsplats med hus under uppförande"><div class="wrap">
+  <div class="hero-card">
     <p class="eyebrow mono">Din lokala byggpartner i Skövde</p>
     <h1>Vi bygger dina <span class="it">idéer.</span></h1>
-    <p class="lead">Snickeri, måleri, mur, sten och grävning – utfört med hantverkarens stolthet och en tydlig offert från start.</p>
-    <ul class="checks"><li>Kostnadsfri offert – utan förpliktelser</li><li>Ett team för hela projektet</li><li>Lokalt i Skövde med omnejd</li></ul>
+    <p class="lead">Snickeri, måleri, mur, sten och grävning – med en tydlig offert från start.</p>
     <div class="actions"><a href="offert.html" class="btn acc">Begär offert ${ARROW}</a><a href="tel:${TEL}" class="btn line">Ring ${PHONE}</a></div>
-    <div class="minis" aria-label="Våra arbetsområden"><a href="murning.html" class="tx-brick"><span>Mur</span></a><a href="maleri.html" class="tx-paint"><span>Måleri</span></a><a href="kakel-tapet.html" class="tx-tile"><span>Kakel</span></a><a href="snickeri.html" class="tx-wood"><span>Snickeri</span></a><a href="stenlaggning.html" class="tx-stone"><span>Sten</span></a></div>
   </div>
 </div></section>
+<div class="trust"><div class="wrap"><ul><li>Kostnadsfri offert – utan förpliktelser</li><li>Ett team för hela projektet</li><li>Lokalt i Skövde med omnejd</li></ul></div></div>
 
 <section class="alt"><div class="wrap">
   <div class="sec-head"><div><p class="eyebrow mono">Tjänster</p><h2>Allt under <span class="it">ett</span> tak</h2></div><p>Välj det du behöver hjälp med – eller kombinera. Ett team, en kontaktperson.</p></div>

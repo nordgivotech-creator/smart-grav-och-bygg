@@ -247,3 +247,22 @@ footer ul{list-style:none;display:grid;gap:.5rem}footer a:hover{color:var(--acc)
   .hero-bg{background-position:70% center;min-height:0}
   .hero-bg::before{background:linear-gradient(180deg,rgba(236,232,223,.97) 0%,rgba(236,232,223,.9) 60%,rgba(236,232,223,.72) 100%)}
 }
+
+/* Hero: hela bilden syns, text i ruta */
+.hero-bg{min-height:0;height:clamp(540px,50vw,820px);background:#d9c9a8 url(hero-bg.jpg) center 62%/cover no-repeat}
+.hero-bg::before{display:none}
+.hero-bg .wrap{display:flex;justify-content:flex-end}
+.hero-card{background:var(--paper);border:1.5px solid var(--ink);box-shadow:10px 10px 0 var(--acc);padding:clamp(22px,2.6vw,40px);max-width:520px}
+.hero-card h1{font-size:clamp(3rem,5.2vw,5rem);margin-bottom:1rem}
+.hero-card .lead{font-size:1.08rem}
+.hero-card .actions{margin-top:1.5rem}
+.trust{background:var(--ink);color:var(--paper)}
+.trust ul{list-style:none;display:flex;gap:.6rem 2.4rem;flex-wrap:wrap;padding-block:1rem;justify-content:center;font-weight:600;font-size:.95rem}
+.trust li{display:flex;gap:.6rem;align-items:center}
+.trust li::before{content:"";width:16px;height:16px;background:var(--acc);clip-path:polygon(14% 52%,0 66%,38% 100%,100% 22%,86% 8%,38% 72%)}
+@media(max-width:1000px){
+  .hero-bg{height:auto;background:var(--paper) url(hero-bg.jpg) top center/100% auto no-repeat;padding-top:62vw;align-items:flex-start}
+  .hero-bg .wrap{padding-inline:0}
+  .hero-card{max-width:none;width:100%;box-shadow:none;border-width:1.5px 0}
+  .trust ul{justify-content:flex-start}
+}
