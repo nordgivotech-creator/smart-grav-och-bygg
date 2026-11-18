@@ -74,7 +74,7 @@ function layout({ file, title, desc, body, active = '', schema = '' }) {
 ${HEAD_FONTS}
 <link rel="stylesheet" href="styles.css">${schema}
 </head>
-<body>
+<body${file === 'index.html' ? ' class="home"' : ''}>
 <div class="util mono"><div class="wrap"><span>Skövde med omnejd · Kostnadsfri offert</span><span>Ring oss: <a href="tel:${TEL}">${PHONE}</a></span></div></div>
 <header class="bar"><div class="wrap">
   <a href="index.html" class="logo" aria-label="Smart Gräv och Bygg – startsida"><img class="brandimg" src="logo.png" alt="" width="67" height="62">Smart Gräv &amp; Bygg</a>

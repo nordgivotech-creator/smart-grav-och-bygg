@@ -310,3 +310,32 @@ body::after{background:rgba(10,9,7,.8)}
 .hero-card .btn{text-shadow:none}
 .hero-bg{position:relative}
 .hero-bg::before{display:block!important;content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(10,9,7,.78) 0%,rgba(10,9,7,.45) 45%,rgba(10,9,7,0) 75%)}
+
+/* ===== Anpassning: bilden beskärs/zoomas aldrig för hårt ===== */
+/* Smal/hög skärm (mobil, surfplatta stående): hela bilden i bredd överst, tonas ut i bakgrundsfärgen */
+body::before{background:#0a0907 url(hero-bg.jpg) center top/100% auto no-repeat}
+body::after{background:linear-gradient(180deg,rgba(10,9,7,.5) 0,rgba(10,9,7,.62) 34vw,#0a0907 66vw)}
+/* Vanlig bred skärm (laptop/desktop): fyll skärmen, liten beskärning */
+@media (min-aspect-ratio:3/2) and (max-aspect-ratio:2/1){
+  body::before{background:#0a0907 url(hero-bg.jpg) center/cover no-repeat}
+  body::after{background:rgba(10,9,7,.8)}
+}
+/* Extra bred skärm: hela bildhöjden, mörka sidor */
+@media (min-aspect-ratio:2/1){
+  body::before{background:#0a0907 url(hero-bg.jpg) center/auto 100% no-repeat}
+  body::after{background:linear-gradient(90deg,#0a0907 0,rgba(10,9,7,.8) 22%,rgba(10,9,7,.8) 78%,#0a0907 100%)}
+}
+/* Mindre, lugnare skala */
+h1{font-size:clamp(2.9rem,6.4vw,5.6rem)}
+h2{font-size:clamp(2.1rem,4.4vw,3.6rem)}
+.hero-card h1{font-size:clamp(2.9rem,6.6vw,5.8rem)}
+.hero-bg{min-height:min(64vh,600px)}
+section{padding-block:clamp(44px,6vw,88px)}
+.hero-card{padding:clamp(28px,5vw,64px) 0}
+@media(max-width:1000px){.hero-bg{min-height:0}.hero-card{padding:32px 0 36px}}
+
+/* Stående/nästan fyrkantiga skärmar: bilden är fast, visas i full bredd (ingen zoom) och tonas mot mörkt */
+@media (max-aspect-ratio:149/100){
+  body::before{position:fixed;inset:0;background:#0a0907 url(hero-bg.jpg) center 35%/100% auto no-repeat}
+  body::after{position:fixed;inset:0;background:linear-gradient(180deg,#0a0907 0,#0a0907 calc((100% - 62.1vw)*.35 - 12vw),rgba(10,9,7,.66) calc((100% - 62.1vw)*.35),rgba(10,9,7,.66) calc((100% - 62.1vw)*.35 + 62.1vw),#0a0907 calc((100% - 62.1vw)*.35 + 62.1vw + 14vw),#0a0907 100%)}
+}
