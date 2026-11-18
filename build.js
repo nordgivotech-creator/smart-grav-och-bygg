@@ -68,7 +68,7 @@ function layout({ file, title, desc, body, active = '', schema = '' }) {
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <meta name="theme-color" content="#ece8df">
-<meta property="og:image" content="hero.jpg">
+<meta property="og:image" content="hero-bg.jpg">
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}"><meta property="og:type" content="website"><meta property="og:locale" content="sv_SE">
 <link rel="icon" href="favicon.png" type="image/png">
 ${HEAD_FONTS}
@@ -118,19 +118,15 @@ layout({
   desc: 'Din lokala byggpartner i Skövde. Snickeri, måleri, fasad, stenläggning, murning, kakel, tapet och grävning. Begär en kostnadsfri offert idag.',
   schema: `\n<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'HomeAndConstructionBusiness', name: 'Smart Gräv och Bygg', description: 'Byggservice i Skövde: snickeri, måleri, fasad, mur, kakel, tapet, stenläggning och grävning.', telephone: TEL, areaServed: 'Skövde', address: { '@type': 'PostalAddress', addressLocality: 'Skövde', addressCountry: 'SE' }, sameAs: [FB, IG] })}</script>`,
   body: `
-<section class="hero"><div class="wrap hero-grid">
-  <div>
+<section class="hero hero-bg"><div class="wrap">
+  <div class="hero-text">
     <p class="eyebrow mono">Din lokala byggpartner i Skövde</p>
     <h1>Vi bygger dina <span class="it">idéer.</span></h1>
     <p class="lead">Snickeri, måleri, mur, sten och grävning – utfört med hantverkarens stolthet och en tydlig offert från start.</p>
     <ul class="checks"><li>Kostnadsfri offert – utan förpliktelser</li><li>Ett team för hela projektet</li><li>Lokalt i Skövde med omnejd</li></ul>
     <div class="actions"><a href="offert.html" class="btn acc">Begär offert ${ARROW}</a><a href="tel:${TEL}" class="btn line">Ring ${PHONE}</a></div>
-  </div>
-  <div>
-    <figure class="herofig"><img src="hero.jpg" alt="Smart Gräv och Bygg – byggarbetsplats med hus under uppförande" width="702" height="436"></figure>
     <div class="minis" aria-label="Våra arbetsområden"><a href="murning.html" class="tx-brick"><span>Mur</span></a><a href="maleri.html" class="tx-paint"><span>Måleri</span></a><a href="kakel-tapet.html" class="tx-tile"><span>Kakel</span></a><a href="snickeri.html" class="tx-wood"><span>Snickeri</span></a><a href="stenlaggning.html" class="tx-stone"><span>Sten</span></a></div>
   </div>
-</div>
 </div></section>
 
 <section class="alt"><div class="wrap">

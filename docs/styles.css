@@ -236,3 +236,14 @@ footer ul{list-style:none;display:grid;gap:.5rem}footer a:hover{color:var(--acc)
   dl.kv{grid-template-columns:100px 1fr}
 }
 @media print{.util,header.bar,.callbar,.cta{display:none}}
+
+/* Hero med kundens bakgrundsbild */
+.hero-bg{position:relative;isolation:isolate;display:flex;align-items:center;min-height:min(84vh,780px);background:var(--paper) url(hero-bg.jpg) 78% center/cover no-repeat}
+.hero-bg::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,var(--paper) 0%,rgba(236,232,223,.98) 42%,rgba(236,232,223,.5) 62%,rgba(236,232,223,.05) 100%)}
+.hero-bg .wrap{width:100%}
+.hero-text{max-width:640px}
+.hero-bg .minis{max-width:520px}
+@media(max-width:1000px){
+  .hero-bg{background-position:70% center;min-height:0}
+  .hero-bg::before{background:linear-gradient(180deg,rgba(236,232,223,.97) 0%,rgba(236,232,223,.9) 60%,rgba(236,232,223,.72) 100%)}
+}
