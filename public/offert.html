@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Begär offert – Smart Gräv och Bygg i Skövde</title>
+<meta name="description" content="Begär en kostnadsfri offert från Smart Gräv och Bygg i Skövde. Beskriv ditt projekt så återkommer vi.">
+<meta name="theme-color" content="#ece8df">
+<meta property="og:title" content="Begär offert – Smart Gräv och Bygg i Skövde"><meta property="og:description" content="Begär en kostnadsfri offert från Smart Gräv och Bygg i Skövde. Beskriv ditt projekt så återkommer vi."><meta property="og:type" content="website"><meta property="og:locale" content="sv_SE">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="util mono"><div class="wrap"><span>Skövde med omnejd · Kostnadsfri offert</span><span>Ring oss: <a href="tel:+46733582129">073-358 21 29</a></span></div></div>
+<header class="bar"><div class="wrap">
+  <a href="index.html" class="logo" aria-label="Smart Gräv och Bygg – startsida"><i></i>Smart Gräv &amp; Bygg</a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Meny</button>
+  <nav class="menu" id="menu" aria-label="Huvudmeny">
+    <a href="index.html">Hem</a>
+    <div class="dd"><a href="tjanster.html">Tjänster</a><div class="sub"><a href="snickeri.html">Snickeri</a><a href="maleri.html">Måleri</a><a href="fasad.html">Fasad</a><a href="stenlaggning.html">Stenläggning</a><a href="murning.html">Murning</a><a href="kakel-tapet.html">Kakel & Tapet</a><a href="gravning.html">Gräv & mark</a></div></div>
+    <a href="sa-jobbar-vi.html">Så jobbar vi</a>
+    <a href="om-oss.html">Om oss</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="offert.html" class="btn acc">Begär offert <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></a>
+  </nav>
+</div></header>
+<main>
+<section class="ph"><div class="wrap"><p class="crumbs mono"><a href="index.html">Hem</a> / Begär offert</p><h1>Begär <span class="it">offert</span></h1><p class="lead">Fyll i formuläret så återkommer vi med en tydlig offert. Det tar ungefär två minuter.</p></div></section>
+<section><div class="wrap q-grid">
+  <form class="q" id="form" novalidate>
+    <fieldset><legend><span>01</span> Vad ska göras?</legend>
+      <div class="field" id="f-service"><div class="chips"><span><input type="radio" name="service" id="s0" value="Snickeri / Näjari"><label for="s0">Snickeri / Näjari</label></span><span><input type="radio" name="service" id="s1" value="Måleri"><label for="s1">Måleri</label></span><span><input type="radio" name="service" id="s2" value="Fasad"><label for="s2">Fasad</label></span><span><input type="radio" name="service" id="s3" value="Stenarbete / Stenläggning"><label for="s3">Stenarbete / Stenläggning</label></span><span><input type="radio" name="service" id="s4" value="Murning / Byggnation"><label for="s4">Murning / Byggnation</label></span><span><input type="radio" name="service" id="s5" value="Kakel &amp; Tapet"><label for="s5">Kakel &amp; Tapet</label></span><span><input type="radio" name="service" id="s6" value="Grävning &amp; Markarbete"><label for="s6">Grävning &amp; Markarbete</label></span><span><input type="radio" name="service" id="s7" value="Annat / Vet ej"><label for="s7">Annat / Vet ej</label></span></div><span class="emsg"></span></div>
+      <div class="field" id="f-message"><label for="message">Beskriv projektet *</label><textarea id="message" name="message" placeholder="Vad ska göras, ungefärlig storlek (kvm), önskemål och eventuella detaljer…"></textarea><span class="emsg"></span></div>
+    </fieldset>
+    <fieldset><legend><span>02</span> Plats &amp; tid</legend>
+      <div class="g2">
+        <div class="field"><label for="city">Ort / adress</label><input type="text" id="city" name="city" autocomplete="address-level2" placeholder="t.ex. Skövde"></div>
+        <div class="field"><label for="timing">När vill du starta?</label><select id="timing" name="timing"><option value="">Välj…</option><option>Så snart som möjligt</option><option>Inom 1 månad</option><option>Inom 3 månader</option><option>Flexibelt / vet ej</option></select></div>
+      </div>
+      <div class="field"><label for="budget">Ungefärlig budget (valfritt)</label><select id="budget" name="budget"><option value="">Vill inte ange</option><option>Under 10 000 kr</option><option>10 000 – 50 000 kr</option><option>50 000 – 150 000 kr</option><option>Över 150 000 kr</option></select></div>
+    </fieldset>
+    <fieldset><legend><span>03</span> Dina uppgifter</legend>
+      <div class="g2">
+        <div class="field" id="f-name"><label for="name">Namn *</label><input type="text" id="name" name="name" autocomplete="name"><span class="emsg"></span></div>
+        <div class="field" id="f-phone"><label for="phone">Telefon *</label><input type="tel" id="phone" name="phone" autocomplete="tel"><span class="emsg"></span></div>
+      </div>
+      <div class="g2">
+        <div class="field" id="f-email"><label for="email">E-post (valfritt)</label><input type="email" id="email" name="email" autocomplete="email"><span class="emsg"></span></div>
+        <div class="field"><label for="contactPref">Helst kontakt via</label><select id="contactPref" name="contactPref"><option value="">Spelar ingen roll</option><option>Telefonsamtal</option><option>SMS</option><option>E-post</option></select></div>
+      </div>
+      <div class="hp" aria-hidden="true"><label>Webbplats<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+      <div class="field" id="f-consent"><div class="consent"><input type="checkbox" id="consent" name="consent"><label for="consent">Jag godkänner att Smart Gräv och Bygg lagrar och använder mina uppgifter för att kunna svara på min förfrågan. Uppgifterna används inte för något annat.</label></div><span class="emsg"></span></div>
+    </fieldset>
+    <button class="btn acc" type="submit" id="submit">Skicka förfrågan <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg></button>
+    <p class="formerr" id="formerr" role="alert"></p>
+    <div class="sent" id="sent" role="status" tabindex="-1"></div>
+  </form>
+  <div>
+    <div class="side-card"><h3>Så går det till</h3><ol><li>Du skickar förfrågan.</li><li>Vi återkommer och går igenom behovet.</li><li>Du får en tydlig offert.</li></ol></div>
+    <div class="side-card" style="background:var(--ink);color:var(--paper)"><h3 style="color:var(--acc)">Hellre ringa?</h3><p style="color:#c0bcaf;margin-bottom:1rem">Brådskande eller bara lättare att prata?</p><a class="btn acc" href="tel:+46733582129">073-358 21 29</a></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap">
+  <div class="fgrid">
+    <div><a href="index.html" class="logo"><i></i>Smart Gräv &amp; Bygg</a><p style="max-width:32ch">Din lokala byggpartner i Skövde. Kvalitet, noggrannhet och pålitlighet.</p></div>
+    <div><h4>Tjänster</h4><ul><li><a href="snickeri.html">Snickeri</a></li><li><a href="maleri.html">Måleri</a></li><li><a href="fasad.html">Fasad</a></li><li><a href="stenlaggning.html">Stenläggning</a></li><li><a href="murning.html">Murning</a></li><li><a href="kakel-tapet.html">Kakel & Tapet</a></li><li><a href="gravning.html">Gräv & mark</a></li></ul></div>
+    <div><h4>Företaget</h4><ul><li><a href="om-oss.html">Om oss</a></li><li><a href="sa-jobbar-vi.html">Så jobbar vi</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="offert.html">Begär offert</a></li></ul></div>
+    <div><h4>Kontakt</h4><ul><li><a href="tel:+46733582129">073-358 21 29</a></li><li>Skövde med omnejd</li><li><a href="https://www.facebook.com/murare.snickare" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.instagram.com/elyas.gholami651" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+  </div>
+  <div class="fbot mono"><span>© <span id="yr">2026</span> Smart Gräv och Bygg</span><span>Skövde</span></div>
+</div></footer>
+<div class="callbar"><a href="tel:+46733582129" class="btn acc">Ring 073-358 21 29</a><a href="offert.html" class="btn">Offert</a></div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -201,11 +201,10 @@ function serveStatic(req, res, url) {
   let p = decodeURIComponent(url.pathname);
   if (p === '/admin' || p === '/admin/') p = '/admin.html';
   if (p === '/') p = '/index.html';
-  if (p === '/tack') p = '/index.html';
   const file = path.normalize(path.join(PUBLIC, p));
   if (!file.startsWith(PUBLIC + path.sep)) return send(res, 403, 'Förbjudet');
   fs.readFile(file, (err, buf) => {
-    if (err) return send(res, 404, 'Sidan hittades inte', SEC);
+    if (err) return fs.readFile(path.join(PUBLIC, '404.html'), (e2, b2) => e2 ? send(res, 404, 'Sidan hittades inte', SEC) : (res.writeHead(404, { 'Content-Type': MIME['.html'], ...SEC }), res.end(b2)));
     const ext = path.extname(file).toLowerCase();
     const h = { 'Content-Type': MIME[ext] || 'application/octet-stream', ...SEC,
       'Cache-Control': 'no-cache' };

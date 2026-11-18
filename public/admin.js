@@ -92,6 +92,8 @@
         <dt>E-post</dt><dd>${esc(i.email || '–')}</dd>
         <dt>Ort / adress</dt><dd>${esc(i.city || '–')}</dd>
         <dt>Starttid</dt><dd>${esc(i.timing || '–')}</dd>
+        <dt>Budget</dt><dd>${esc(i.budget || '–')}</dd>
+        <dt>Kontakt via</dt><dd>${esc(i.contactPref || '–')}</dd>
       </dl>
       <div class="msg">${esc(i.message)}</div>
       <label for="st">Status</label>

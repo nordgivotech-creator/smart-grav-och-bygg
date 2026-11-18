@@ -21,3 +21,7 @@ Kräver en server med **persistent disk** (data sparas i en fil), HTTPS och en d
 - **Fly.io / Render / Railway:** deploya med `Dockerfile`, montera en volym på `/data`, sätt `TRUST_PROXY=1` och `ADMIN_PASSWORD`. Hälsokontroll: `/healthz`.
 - **Egen VPS:** `node server.js` bakom Nginx/Caddy (HTTPS), kör med pm2 eller systemd.
 - Efter publicering: lägg till `sitemap.xml` och domänen i `og:`-taggar.
+
+## Sidor
+Alla HTML-sidor genereras av `node build.js` (innehåll och mallar finns i `build.js`). Skriptet skriver till `public/` och kopierar den statiska sajten till `docs/` (GitHub Pages). Kör det efter varje ändring i texter eller mallar.
+På Pages (utan server) skickas offertförfrågan som ett förifyllt WhatsApp/SMS till företagets nummer; med servern sparas den i personalpanelen.
