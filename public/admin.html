@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Personalpanel – Smart Gräv och Bygg</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div id="login" class="login" hidden>
+  <form id="loginForm" class="lbox">
+    <div class="logo">S</div>
+    <h1>Personalpanel</h1>
+    <p>Smart Gräv och Bygg</p>
+    <input type="password" id="pw" placeholder="Lösenord" autocomplete="current-password" autofocus>
+    <button class="btn" type="submit">Logga in</button>
+    <div class="err" id="loginErr"></div>
+  </form>
+</div>
+
+<div id="app" hidden>
+  <header class="top">
+    <div class="ttl"><span class="logo sm">S</span><div><b>Förfrågningar</b><small>Smart Gräv och Bygg</small></div></div>
+    <div class="actions">
+      <span class="live" id="live" title="Uppdateras automatiskt">● Live</span>
+      <a class="btn ghost" href="/api/admin/export.csv">Exportera CSV</a>
+      <button class="btn ghost" id="logout">Logga ut</button>
+    </div>
+  </header>
+
+  <main class="body">
+    <section class="stats" id="stats"></section>
+    <div class="bar">
+      <div class="tabs" id="tabs"></div>
+      <input type="search" id="q" placeholder="Sök namn, telefon, ort, text…">
+    </div>
+    <div class="layout">
+      <div class="list" id="list"></div>
+      <aside class="detail" id="detail"><div class="empty">Välj en förfrågan för att se detaljer.</div></aside>
+    </div>
+  </main>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
