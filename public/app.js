@@ -41,7 +41,7 @@
     'Hej! Jag vill begära offert från Smart Gräv och Bygg.', '',
     'Tjänst: ' + d.service, d.city && 'Ort: ' + d.city, d.timing && 'Start: ' + d.timing, d.budget && 'Budget: ' + d.budget, '',
     d.message, '', 'Namn: ' + d.name, 'Telefon: ' + d.phone, d.email && 'E-post: ' + d.email, d.contactPref && 'Kontakt via: ' + d.contactPref
-  ].filter(x => x !== '' ? !!x : true).join('\n');
+  ].map(x => x || '').join('\n').replace(/\n{3,}/g, '\n\n');
 
   const sent = $('#sent');
   const showStatic = d => {
