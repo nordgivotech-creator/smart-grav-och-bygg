@@ -68,15 +68,16 @@ function layout({ file, title, desc, body, active = '', schema = '' }) {
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <meta name="theme-color" content="#ece8df">
+<meta property="og:image" content="hero.jpg">
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}"><meta property="og:type" content="website"><meta property="og:locale" content="sv_SE">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" type="image/png">
 ${HEAD_FONTS}
 <link rel="stylesheet" href="styles.css">${schema}
 </head>
 <body>
 <div class="util mono"><div class="wrap"><span>Skövde med omnejd · Kostnadsfri offert</span><span>Ring oss: <a href="tel:${TEL}">${PHONE}</a></span></div></div>
 <header class="bar"><div class="wrap">
-  <a href="index.html" class="logo" aria-label="Smart Gräv och Bygg – startsida"><i></i>Smart Gräv &amp; Bygg</a>
+  <a href="index.html" class="logo" aria-label="Smart Gräv och Bygg – startsida"><img class="brandimg" src="logo.png" alt="" width="67" height="62">Smart Gräv &amp; Bygg</a>
   <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Meny</button>
   <nav class="menu" id="menu" aria-label="Huvudmeny">
     ${nav('index.html', 'Hem', 'hem')}
@@ -92,7 +93,7 @@ ${body}
 </main>
 <footer><div class="wrap">
   <div class="fgrid">
-    <div><a href="index.html" class="logo"><i></i>Smart Gräv &amp; Bygg</a><p style="max-width:32ch">Din lokala byggpartner i Skövde. Kvalitet, noggrannhet och pålitlighet.</p></div>
+    <div><a href="index.html" class="logo"><img class="brandimg" src="logo.png" alt="Smart Gräv och Bygg" width="119" height="110"></a><p style="max-width:32ch">Din lokala byggpartner i Skövde. Kvalitet, noggrannhet och pålitlighet.</p></div>
     <div><h4>Tjänster</h4><ul>${SERVICES.map(s => `<li><a href="${s.slug}.html">${s.name}</a></li>`).join('')}</ul></div>
     <div><h4>Företaget</h4><ul><li><a href="om-oss.html">Om oss</a></li><li><a href="sa-jobbar-vi.html">Så jobbar vi</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="offert.html">Begär offert</a></li></ul></div>
     <div><h4>Kontakt</h4><ul><li><a href="tel:${TEL}">${PHONE}</a></li><li>Skövde med omnejd</li><li><a href="${FB}" target="_blank" rel="noopener">Facebook</a></li><li><a href="${IG}" target="_blank" rel="noopener">Instagram</a></li></ul></div>
@@ -125,13 +126,11 @@ layout({
     <ul class="checks"><li>Kostnadsfri offert – utan förpliktelser</li><li>Ett team för hela projektet</li><li>Lokalt i Skövde med omnejd</li></ul>
     <div class="actions"><a href="offert.html" class="btn acc">Begär offert ${ARROW}</a><a href="tel:${TEL}" class="btn line">Ring ${PHONE}</a></div>
   </div>
-  <div class="mosaic" aria-label="Våra arbetsområden">
-    <a href="murning.html" class="tx-brick"><span class="mono">Murning</span></a>
-    <a href="maleri.html" class="tx-paint"><span class="mono">Måleri</span></a>
-    <a href="kakel-tapet.html" class="tx-tile"><span class="mono">Kakel</span></a>
-    <a href="snickeri.html" class="tx-wood"><span class="mono">Snickeri</span></a>
-    <a href="stenlaggning.html" class="tx-stone"><span class="mono">Sten</span></a>
+  <div>
+    <figure class="herofig"><img src="hero.jpg" alt="Smart Gräv och Bygg – byggarbetsplats med hus under uppförande" width="702" height="436"></figure>
+    <div class="minis" aria-label="Våra arbetsområden"><a href="murning.html" class="tx-brick"><span>Mur</span></a><a href="maleri.html" class="tx-paint"><span>Måleri</span></a><a href="kakel-tapet.html" class="tx-tile"><span>Kakel</span></a><a href="snickeri.html" class="tx-wood"><span>Snickeri</span></a><a href="stenlaggning.html" class="tx-stone"><span>Sten</span></a></div>
   </div>
+</div>
 </div></section>
 
 <section class="alt"><div class="wrap">
