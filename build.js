@@ -67,7 +67,7 @@ function layout({ file, title, desc, body, active = '', schema = '' }) {
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
-<meta name="theme-color" content="#ece8df">
+<meta name="theme-color" content="#0e0d0a">
 <meta property="og:image" content="hero-bg.jpg">
 <meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(desc)}"><meta property="og:type" content="website"><meta property="og:locale" content="sv_SE">
 <link rel="icon" href="favicon.png" type="image/png">
@@ -131,7 +131,7 @@ layout({
 <section class="alt"><div class="wrap">
   <div class="sec-head"><div><p class="eyebrow mono">Tjänster</p><h2>Allt under <span class="it">ett</span> tak</h2></div><p>Välj det du behöver hjälp med – eller kombinera. Ett team, en kontaktperson.</p></div>
   <div class="cards">${SERVICES.map(s => `<a class="card" href="${s.slug}.html"><div class="tex ${s.tx}"></div><div class="body"><h3>${s.name}</h3><p>${s.short}</p><span class="more">Läs mer</span></div></a>`).join('')}
-    <a class="card" href="offert.html" style="background:var(--ink);color:var(--paper)"><div class="body" style="justify-content:center"><h3 style="color:var(--acc)">Annat projekt?</h3><p style="color:#c0bcaf">Beskriv vad du behöver så hjälper vi dig – eller säger ärligt om det inte är något för oss.</p><span class="more" style="color:var(--paper)">Begär offert</span></div></a>
+    <a class="card" href="offert.html" style="background:#000;color:#f1ece0"><div class="body" style="justify-content:center"><h3 style="color:var(--acc)">Annat projekt?</h3><p style="color:#c0bcaf">Beskriv vad du behöver så hjälper vi dig – eller säger ärligt om det inte är något för oss.</p><span class="more" style="color:#f1ece0">Begär offert</span></div></a>
   </div>
 </div></section>
 
@@ -309,7 +309,7 @@ layout({
   </form>
   <div>
     <div class="side-card"><h3>Så går det till</h3><ol><li>Du skickar förfrågan.</li><li>Vi återkommer och går igenom behovet.</li><li>Du får en tydlig offert.</li></ol></div>
-    <div class="side-card" style="background:var(--ink);color:var(--paper)"><h3 style="color:var(--acc)">Hellre ringa?</h3><p style="color:#c0bcaf;margin-bottom:1rem">Brådskande eller bara lättare att prata?</p><a class="btn acc" href="tel:${TEL}">${PHONE}</a></div>
+    <div class="side-card" style="background:#000;color:#f1ece0"><h3 style="color:var(--acc)">Hellre ringa?</h3><p style="color:#c0bcaf;margin-bottom:1rem">Brådskande eller bara lättare att prata?</p><a class="btn acc" href="tel:${TEL}">${PHONE}</a></div>
   </div>
 </div></section>`
 });
